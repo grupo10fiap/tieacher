@@ -25,8 +25,13 @@ $(function(){
             cache: false,
             type: "POST",
             data: {audio : blob},
-            success: () => {
-             console.log('sucess')
+            success: (response) => {
+             const answer_code = response.question_and_response_code
+             const answer = response.answer
+             const feedback = document.createElement('button')
+             feedback.id = answer_code
+             feedback.class = 'feedback'
+             $('body').append(feedback)
             }, 
             err: (err) => {
                 console.log(err)
@@ -44,6 +49,21 @@ $(function(){
         }else{
             mediaRecorder.stop()
             $(this).text('Gravar')
+        }
+    })
+    $('.feedback').click(function(){
+       const answer_code = $(this).attr('id')
+       $.ajax({
+            url: "https://tieacher-ms.herokuapp.com/feedback/"+answer_code+"/no",
+            cache: false,
+            type: "PUT",
+            success: (response) => {
+             console.log(response)
+            }, 
+            err: (err) => {
+                console.log(err)
+            }
+          })
         }
     })
 })
