@@ -20,6 +20,18 @@ $(function(){
             audio.controls = true
             $('body').append(audio)
         }
+        $.ajax({
+            url: "https://tieacher-ms.herokuapp.com/question",
+            cache: false,
+            type: "POST",
+            data: {audio : blob},
+            success: () => {
+             console.log('sucess')
+            }, 
+            err: (err) => {
+                console.log(err)
+            }
+          })
         }
        
      }, err => {
@@ -35,21 +47,5 @@ $(function(){
         }
     })
 })
-
-
-// $(document).ready(function(){
-//     var bot_words = {
-//         "OLA": "Olá, Meu nome é Rolnando",
-//         "OLÁ": "Olá, Meu nome é Rolnando"
-//     }
-//     $("#chatbot").click(function(){
-//         var response = bot_words[$("#comment").val().toUpperCase()]
-//         if (response) {
-//             $("#resposta").text(response)
-//             return
-//         }
-//         $("#resposta").text('Olá não consigo entender o que vc me perguntou.')
-//     })
-// })
 
 
