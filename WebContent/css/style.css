@@ -1,0 +1,219 @@
+body{
+  background-color: #e5e5e5;
+}
+.form-control{
+border-top: 1px #000;
+}
+form.contato {
+    text-align: center;
+}
+.box1{
+  margin: 30px 270px 30px 0px;
+}
+.p1{
+  text-align: center;
+  font-size: 12;
+  font-style: italic
+}
+.box1 h1{
+  font-size:30px;
+  margin: 50px 100px 20px 0px;
+  color:#5C6D7D;
+}
+.box1 h2{
+  font-size: 18px;
+/* margin:10px 30px 30px 10px; */
+text-align: left;
+color: #5C6D7D;
+}
+
+.resposta{
+  margin: 50px 150px;
+}
+
+.chat1{
+  height: 100%;
+   min-height: 100%;
+   display: -webkit-flex;
+   display: flex;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-justify-content: center;
+   justify-content: center;
+margin-top: 1px;
+}
+.chat1 img{
+  padding: 10px;
+}
+.chat2{
+    margin: 0 150px ;
+    border: 1px solid;
+}
+
+p{
+  color:  #5C6D7D
+}
+.card-img-top{
+  width: 100%;
+border-top-left-radius: calc(.15rem - 1px);
+border-top-right-radius: calc(.15rem - 1px);
+margin-top: 24px;
+}
+.formulario{
+  width: 1100px;
+  height: 570px;
+  /* margin: 10px auto 15px; */
+}
+
+.contato h2{
+  margin: 10px 0;
+  color: #333;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.container {
+  text-align: center;
+  position: relative;
+  left: 15%;
+}
+fieldset{
+  margin: 0 0 10px;
+  }
+
+.contato input[type="text"],
+.contato input[type="email"],
+.contato input[type="password"],
+
+.contato textarea{
+  font-size: 18px;
+  width: 100%;
+  height: 60px;
+  border: 1px solid #ccc;
+  margin-bottom: 5px;
+  padding-left: 10px;
+  box-sizing: border-box;
+  resize: none;
+  max-width: 75%;
+  border-radius: 5px;
+  border-color: dodgerblue;
+}
+.contato textarea{
+  padding-left: 10px;
+  height: 150px;
+  resize: none;
+  border-radius: 5px;
+  border-color: dodgerblue;
+}
+
+.contato .senha
+{
+  max-width: 40%;
+}
+
+.login{
+    display: table;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.form-login{
+    display: table-cell;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    z-index: 2;
+}
+
+.form-login form{
+  max-width: 600px;
+  width: 90%;
+  display: inline-block;
+}
+
+.form-login label{
+  color: black
+}
+
+.form-login input{
+  border-color: black
+}
+
+.form-login input:focus{
+  box-sizing: border-box;
+  border-color: blue
+}
+
+.entrar {
+  background-color: black
+}
+
+.entrar:hover {
+  background-color: black
+}
+
+h1.display4{
+  padding-top: 40px;
+}
+
+#conteudos {
+  display: flexbox;
+  margin: 100;
+  font-size: 50px;
+  color: midnightblue;
+}
+#conteudos:hover{
+  color:white;
+
+}
+#box_conteudo{
+  display: flex;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  justify-content: center;
+  margin: 250px;
+}
+
+#nav-content {
+  text-align: center;
+  align-content: center;
+  font-size: 25px;
+  position: relative;
+  justify-content: center;
+  left: 30%;
+  display: flex;
+
+
+}
+
+#nav_centro{
+left: 20%;
+}
+
+
+.container-conteudo{
+  margin: 20px;
+}
+
+
+.container-contato {
+  margin: 20px;
+}
+
+
+#nav {
+  font-size: 20px;
+  color: #23374d;
+  font-weight: bold;
+ 
+}
+
+#nav-link {
+  color: #23374d;
+
+}
+.erroCadastro{
+  margin-left: 13%;
+  display: none;
+}
