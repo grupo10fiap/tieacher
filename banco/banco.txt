@@ -1,0 +1,76 @@
+create database tieacher
+use tieacher
+create table Customer (
+ idCustomer int PRIMARY KEY AUTO_INCREMENT,
+ name VARCHAR(30) not null,
+ phoneNumber VARCHAR(13) not null,
+ mail VARCHAR(30)not null, 
+ password VARCHAR(12)    not null
+ );
+
+
+create table Employee (
+idEmployee int PRIMARY KEY AUTO_INCREMENT,
+name varchar (30) not null,
+mail varchar (30) not null, 
+login varchar (12) not null,
+password varchar (12) not null
+);
+
+
+
+create table Question (
+idQuestion int PRIMARY KEY AUTO_INCREMENT,
+question varchar (40) not null
+);
+
+
+
+create table QuestionAndAnswer (
+idQuestion int not null,
+idAnswer int not null,
+idCustomer int not null,
+feedBack boolean not null,
+FOREIGN KEY (idQuestion) REFERENCES Question(idQuestion),
+FOREIGN KEY (idAnswer) REFERENCES Answer(idAnswer),
+FOREIGN KEY (idCustomer) REFERENCES Customer(idCustomer)
+);
+
+
+
+
+create table Answer (
+idAnswer int PRIMARY KEY AUTO_INCREMENT,
+answer varchar (40) not null
+); 
+
+
+INSERT INTO Customer( name,phoneNumber, mail, password) values ('Heitor', 1198765432, 'heitoranjos@teste.com', 12345);
+INSERT INTO Customer( name,phoneNumber, mail, password) values ('Joao', 1194262876, 'joao@teste.com', 'teste');
+INSERT INTO Customer( name,phoneNumber, mail, password) values ('Creysu', 11978965232, 'creysu@teste.com', 'senha');
+INSERT INTO Customer( name,mail, mail, password) values ('Juceli', 11947248762, 'juceli@teste.com', 'mortadela');
+
+INSERT INTO Employee( name,phoneNumber, login, password) values ('Severino', 999999999, 'serveras', 'mortadela');
+INSERT INTO Employee( name,phoneNumber, login, password) values ('Juscleide', 111111111, 'jusgatinha', 'miau');
+INSERT INTO Employee( name,phoneNumber, login, password) values ('Juremas', 677678767, 'jureboy', 'gatao');
+INSERT INTO Employee( name,phoneNumber, login, password) values ('Nicolas Cage', 11942628528, 'nick', 'caverna');
+INSERT INTO Employee( name,phoneNumber, login, password) values ('Papito', 98765123566, 'suplitooo', 'rocknroll');
+
+
+INSERT INTO Question(question) values ('Oi, tudo bem?');
+INSERT INTO Question(question) values ('oque é if?');
+INSERT INTO Question(question) values ('para que serve o if?');
+INSERT INTO Question(question) values ('como é feito o if?');
+INSERT INTO Question(question) values ('ya');
+
+
+INSERT INTO Answer(answer) values ('tudo e você?');
+INSERT INTO Answer(answer) values ('o if serve para nada');
+INSERT INTO Answer(answer) values ('o if é o if');
+INSERT INTO Answer(answer) values ('fazendo');
+
+
+INSERT INTO QuestionAndAnswer(idQuestion, idAnswer, idCustomer, feedBack) values (1,1,1, true);
+INSERT INTO QuestionAndAnswer(idQuestion, idAnswer, idCustomer, feedBack) values (2,3,3, false);
+INSERT INTO QuestionAndAnswer(idQuestion, idAnswer, idCustomer, feedBack) values (3,2,2, true);
+INSERT INTO QuestionAndAnswer(idQuestion, idAnswer, idCustomer, feedBack) values (4,4,1, false);
